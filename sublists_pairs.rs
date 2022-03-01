@@ -7,16 +7,16 @@ this assignment, someone is going to pass you a list of
 lists of values. The values in the sublists are treated as
 "paired up" — the sublists should always be of even length,
 otherwise it's an input error. Your job is to iterate over
-this list of lists and produce pairs of values (in order)
-from the sublists.
+this list of lists and produce pairs of values (in the order
+encountered) from the sublists.
 
 For example, given
 ```text
-[[1, 2, 3, 4], [5, 6]]
+[[4, 2, 3, 1], [5, 6]]
 ```
 your iterator should produce
 ```text
-(1, 2) (3, 4) (5, 6)
+(4, 2) (3, 1) (5, 6)
 ```
 Given
 ```text
