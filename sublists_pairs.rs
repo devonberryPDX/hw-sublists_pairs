@@ -60,5 +60,5 @@ the resulting two-tuples in order.
 pub fn sublists_pairs<T>(
     vals: Vec<Vec<T>>,
 ) -> impl Iterator<Item = Result<(T, T), SublistsPairsError>> {
-    todo!()
+    vals.into_iter().flatten().map()
 }
