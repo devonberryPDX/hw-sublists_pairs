@@ -61,16 +61,16 @@ the resulting two-tuples in order.
 pub fn sublists_pairs<T>(
     vals: Vec<Vec<T>>,
 ) -> impl Iterator<Item = Result<(T, T), SublistsPairsError>> {
-    //if vals.len() % 2 != 0 {
-    //    Err()
-    //}
-    vals.into_iter().flatten().tuples().map(|x| Ok(x))
+    vals.into_iter().map(|x| match x.into_iter().next_tuple() {
+        Some(x) => Ok(x),
+        None => Err(SublistsPairsError::OddSublistError),
+    })
 }
 
 #[test]
 fn test() {
     let v: Result<Vec<(usize, usize)>, SublistsPairsError> =
-        sublists_pairs(vec![vec![1, 2], vec![3, 4, 5, 6]]).collect();
+        sublists_pairs(vec![vec![1, 2, 6, 8, 98], vec![3, 4, 5, 6]]).collect();
     println!("{:?}", v);
     //assert_eq!(v.unwrap(), [(1, 2), (3, 4), (5, 6)]);
     //let v: Result<Vec<(usize, usize)>, SublistsPairsError> =

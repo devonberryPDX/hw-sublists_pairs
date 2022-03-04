@@ -1,0 +1,1 @@
+D:\csFiles\PSU\ CS\ Files\winterTerm2022\rust\hw-sublists_pairs\target\debug\main.exe: D:\csFiles\PSU\ CS\ Files\winterTerm2022\rust\hw-sublists_pairs\src\bin\main.rs D:\csFiles\PSU\ CS\ Files\winterTerm2022\rust\hw-sublists_pairs\src\lib.rs

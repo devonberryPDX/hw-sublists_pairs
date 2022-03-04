@@ -3,10 +3,6 @@ name = "sublists_pairs"
 version = "0.1.0"
 edition = "2021"
 
-[lib]
-name = "sublists_pairs"
-path = "sublists_pairs.rs"
-
 [dependencies]
 thiserror = "1.0"
 itertools = "0.10.3"
